@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+
+        <a href="/"><button>ADD Records</button></a>
+        <tr>
+
+            <th>id</th>
+            <th>Name</th>
+            <th>Rating</th>
+            <th>Price</th>
+            <th>Add</th>
+            <th>city</th>
+            
+        <tr>
+            {% for data1 in list%} 
+            <tr>
+
+                <td>{{data1.id}}</td>
+                <td>{{data1.name}}</td>
+                <td>{{data1.rating}}</td>
+                <td>{{data1.price}}</td>
+                <td>{{data1.add}}</td>
+                <td>{{data1.city}}</td>
+                <td><a href="update/{{data1.id}}"><button>Update</button></a></td>
+                <td><button>Delete</button><td>
+                                
+            <tr>
+            {% endfor %}
+    </table>
+</body>
+</html>
